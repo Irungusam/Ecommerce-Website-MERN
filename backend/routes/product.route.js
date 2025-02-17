@@ -1,7 +1,7 @@
 import express from "express";
 import {
   addProduct,
-  listProduct,
+  listProducts,
   removeProduct,
   singleProduct,
 } from "../controllers/product.controller.js";
@@ -21,6 +21,6 @@ productRouter.post(
 );
 productRouter.post("/remove", removeProduct);
 productRouter.post("/single", singleProduct);
-productRouter.post("/list", listProduct);
+productRouter.get("/list", listProducts);
 
 export default productRouter;
